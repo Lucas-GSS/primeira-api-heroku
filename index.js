@@ -6,6 +6,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/', (_req, res) => res.json({ message: 'Está vivo!!!' }));
+app.get('/', (_req, res) => res.json({ message: process.env.MESSAGE }));
 
 app.listen(PORT, () => console.log(`Executando na porta ${PORT}`));
